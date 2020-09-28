@@ -22,11 +22,6 @@ services:
       - APPLICATION_SERVER__API__PUBLIC_HOST=chirpstack-application-server:8001
       - APPLICATION_SERVER__EXTERNAL_API__JWT_SECRET=verysecret
 
-  chirpstack-geolocation-server:
-    image: chirpstack/chirpstack-geolocation-server:3
-    environment:
-      - GEO_SERVER__BACKEND__NAME=collos
-
   postgresql:
     image: postgres:9.6-alpine
     environment:
