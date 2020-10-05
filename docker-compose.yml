@@ -29,8 +29,12 @@ services:
   mosquitto:
     image: eclipse-mosquitto
     ports:
-      - 1883:1883
+      - 1885:1885
+    volumes:
+      - ./configuration/mosquitto/:/mosquitto/config/
+      - mosquittoData:/mosquitto/data
 
 volumes:
   postgresqldata:
   redisdata:
+  mosquittoData:
