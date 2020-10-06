@@ -638,7 +638,7 @@ resolve_domain_suffix=".joineuis.lora-alliance.org"
   # Default server endpoint.
   #
   # This API is provided by ChirpStack Application Server.
-  server="http://localhost:8003"
+  server="http://chirpstack-application-server:8003"
 
   # ca certificate used by the default join-server client (optional)
   ca_cert=""
