@@ -27,7 +27,7 @@ services:
       - redisdata:/data
 
   mosquitto:
-    image: eclipse-mosquitto
+    image: eclipse-mosquitto:1.6.12-openssl
     ports:
       - 1885:1885
     volumes:
