@@ -1,8 +1,8 @@
 # Configure access for railnet user
 user railnet
-topic write gateway/%c/event/+
-topic read gateway/%c/command/#
+pattern write gateway/%c/event/+
+pattern read gateway/%c/command/#
 
 # Configure access for chirpstack user
 user chirpstack
-topic readwrite #
+topic #
