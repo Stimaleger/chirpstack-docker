@@ -3,11 +3,13 @@ version: "3"
 services:
   chirpstack-network-server:
     image: chirpstack/chirpstack-network-server:3
+    container_name: cs-nw-server
     volumes:
       - ./configuration/chirpstack-network-server:/etc/chirpstack-network-server
 
   chirpstack-application-server:
     image: chirpstack/chirpstack-application-server:3
+    container_name: cs-app-server
     ports:
       - 8080:8080
     volumes:
@@ -15,6 +17,7 @@ services:
 
   postgresql:
     image: postgres:9.6-alpine
+    container_name: cs-postgres
     environment:
       - POSTGRES_PASSWORD=root
     volumes:
@@ -23,11 +26,13 @@ services:
 
   redis:
     image: redis:5-alpine
+    container_name: cs-redis
     volumes:
       - redisdata:/data
 
   mosquitto:
     image: eclipse-mosquitto:1.6.12-openssl
+    container_name: cs-mqtt
     ports:
       - 1885:1885
     volumes:
