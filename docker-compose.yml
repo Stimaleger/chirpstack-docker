@@ -34,7 +34,7 @@ services:
     image: eclipse-mosquitto:1.6.12-openssl
     container_name: cs-mqtt
     ports:
-      - 1885:1885
+      - 1885:1883
     volumes:
       - ./configuration/mosquitto/:/mosquitto/config/
       - mosquittoData:/mosquitto/data
